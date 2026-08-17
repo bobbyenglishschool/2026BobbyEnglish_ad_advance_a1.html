@@ -18,7 +18,7 @@
             --uci-gold: #fecc07; 
             --soft-red: #e74c3c;
             --card-bg: #f8fafc;
-            --border-color: #cbd5e1;
+            --border-color: #1b3d6d; /* 🎯 強制全面為巴比深藍色外框 */
             --line-color: #cbd5e1;
             --text-main: #1e293b;
             --text-sub: #475569;
@@ -168,7 +168,7 @@
         /* 📜 動態捲動卡片樣式 */
         .description-scroll-box {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
+            border: 1px solid #cbd5e1;
             border-left: 4px solid var(--uci-blue);
             padding: 16px 20px;
             border-radius: 8px;
@@ -196,7 +196,7 @@
 
         /* 🎯 中英文字體分離與層級對比樣式 */
         p.paragraph-desc {
-            font-size: 13px; /* 中文字級清晰易讀 */
+            font-size: 13px;
             font-weight: 500;
             margin: 0 0 8px 0;
             text-align: justify;
@@ -244,7 +244,7 @@
             white-space: nowrap;
         }
 
-        /* 🛡️ 核心表格全邊框防線：外框與內部單元格完整顯示 */
+        /* 🛡️ 核心表格全邊框防線：外框與內部單元格完整顯示 (100% 巴比深藍 #1b3d6d !important) */
         .table-container {
             width: 100%;
             margin-top: 8px;
@@ -253,20 +253,20 @@
 
         table.ad-table { 
             width: 100%; 
-            border-collapse: separate; /* 改為 separate 以完整呈現整體外框 */
-            border-spacing: 0;
+            border-collapse: collapse !important; /* 全面統一為實體 collapse 演算法 */
+            margin-bottom: 0;
             font-size: 12.5px;
             table-layout: fixed;
             word-wrap: break-word;
-            border: 1px solid var(--border-color) !important; /* 強制整體外框顯影 */
-            border-radius: 6px;
+            border: 1px solid #1b3d6d !important;
+            border-radius: 0px;
             overflow: hidden;
+            background-color: #ffffff;
         }
 
         /* 明確設定內部格線與邊界 */
         table.ad-table th, table.ad-table td { 
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+            border: 1px solid #1b3d6d !important;
             padding: 9px 12px; 
             vertical-align: middle; 
             text-align: left; 
@@ -274,16 +274,8 @@
             word-break: break-word;
         }
 
-        /* 消除最右側與最底部的重複邊框 */
-        table.ad-table th:last-child, table.ad-table td:last-child {
-            border-right: none;
-        }
-        table.ad-table tr:last-child td {
-            border-bottom: none;
-        }
-
         table.ad-table th { 
-            background-color: #f1f5f9; 
+            background-color: #f0f4f8; 
             color: var(--uci-blue); 
             text-align: center; 
             font-weight: 700;
@@ -298,7 +290,7 @@
 
         .info-card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
+            border: 1px solid #cbd5e1;
             padding: 12px 16px;
             border-radius: 6px;
             margin-top: 6px;
@@ -317,7 +309,7 @@
             color: var(--text-sub); 
             display: block; 
             margin-top: 2px; 
-            font-size: 11px; /* 英文說明縮小襯托 */
+            font-size: 11px; 
             font-weight: 400; 
             line-height: 1.4;
             text-align: justify;
@@ -383,7 +375,7 @@
 
         /* 🖼️ 頁尾 Advancekids.png 圖檔左右延伸與放大調校 */
         .footer-image-box {
-            width: calc(100% + 80px); /* 向左右擴展延伸 */
+            width: calc(100% + 80px); 
             margin-left: -40px; 
             margin-top: 8px;
             overflow: hidden;
@@ -393,9 +385,9 @@
         }
 
         .page-footer-img {
-            width: 100%; /* 寬度100%滿版延伸 */
+            width: 100%; 
             max-width: 100%; 
-            max-height: 145px; /* 高度適度放至 145px 展現大氣視覺 */
+            max-height: 145px; 
             object-fit: contain;
             display: block;
             margin: 0 auto;
@@ -439,6 +431,7 @@
 
         /* 🖨️ 列印專用防護罩：只有在「真正列印紙張」時才精準鎖定 A4 尺寸！ */
         @media print {
+            @page { size: A4 portrait; margin: 10mm 15mm; }
             body { background-color: #fff; padding: 0; margin: 0; }
             .ad-container { max-width: 100%; width: 100%; box-shadow: none; border-radius: 0; }
             .page {
@@ -456,12 +449,12 @@
             .page:last-child { page-break-after: avoid; }
             .description-scroll-box { max-height: none !important; overflow-y: visible !important; border: none !important; padding: 0 !important; }
             .header-flex-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            table.ad-table th, table.ad-table td { 
-                border: 1px solid var(--border-color) !important; 
+            table.ad-table, table.ad-table th, table.ad-table td { 
+                border: 1px solid #1b3d6d !important; 
                 -webkit-print-color-adjust: exact; 
                 print-color-adjust: exact; 
             }
-            table.ad-table th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            table.ad-table th { background-color: #f0f4f8 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             .footer-image-box { width: calc(100% + 36mm) !important; margin-left: -18mm !important; }
             .last-page-footer-box { width: calc(100% + 36mm) !important; margin-left: -18mm !important; }
             .page-footer-img { max-height: 130px !important; }
@@ -516,7 +509,7 @@
                 <p class="paragraph-desc">
                     當孩子完成 Let's Go 的基礎航行後，Bobby 老師將帶領他們跨入更廣闊的知識海洋。在 Advance A1 班，我們不再只是練習單純的對話，而是將美語轉化為「探索世界的望遠鏡」與「表達自我的邏輯腦」。透過 Bobby 老師引領的主題探索課程 (Oxford Discover 1)，孩子將化身小小觀察家，從自然、科學到社區生活，在解決問題的過程中建立獨立思考的習慣；同時，配合 Joy 老師的語法活用引導 (Azar Grammar)，將零散的單字編織成完整的邏輯，讓孩子從「說單字」進步到「講故事」，自信地活用美語寫下對世界的發現。
                 </p>
-                <p class="paragraph-desc" style="margin-top: 8px; border-top: 1px dashed var(--border-color); padding-top: 8px;">
+                <p class="paragraph-desc" style="margin-top: 8px; border-top: 1px dashed #cbd5e1; padding-top: 8px;">
                     <strong style="font-weight: 800; color: var(--uci-blue);">【Discover Your World, Build Your English】</strong>
                     <span class="light-en-text">After mastering the basics, it's time for young learners to use English as a tool to explore something bigger. In our A1 Advance Class, we bridge the gap between simple conversation and meaningful discovery. By integrating inquiry-based exploration with systematic language building, we empower 3rd to 5th graders to become confident thinkers.</span>
                 </p>
@@ -617,7 +610,17 @@
                         </tr>
                         <tr>
                             <td style="font-weight: bold;">⏰ 上課時間 | Class Time</td>
-                            <td class="left-align">每週三、五下午 4:30 p.m. - 6:30 p.m. (每次 2 小時)<br><span class="note">Every Wednesday and Friday 4:30 - 6:30 p.m. (2 hours per lesson)</span></td>
+                            <!-- 🎯 升級重點：幾何 100% 精準居中，格式與報名表/契約書完全一致 -->
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: 2px 0;">
+                                    <div style="font-weight:800; color:var(--uci-blue); font-size:13px; line-height:1.2;">
+                                        <span class="no-orphan">每週三、五</span>
+                                    </div>
+                                    <div style="font-weight:700; color:var(--uci-blue); font-size:11.5px; line-height:1.2; margin-top:3px;">
+                                        <span class="no-orphan">4:30 PM - 6:30 PM (2小時/堂)</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td style="font-weight: bold;">🔢 總堂數 | Total Lessons</td>
@@ -669,24 +672,23 @@
 
 </div>
 
+<!-- 📡 雙視窗雙開機制，防範彈窗阻斷 -->
 <script>
 function openDualLinks(event) {
     if (event) event.preventDefault();
     
-    // 🎯 Aegis 核心修正：標準化網址，防止被瀏覽器彈跳阻斷並移除結尾多餘斜線
-    const mainLink = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Advance-adv_a1.html";
-    const contractLink = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Contract-AdvanceA1.html";
+    // 🎯 Aegis 核心修正：標準化網址，防止被瀏覽器彈跳阻斷並加入 150ms 安全延遲
+    var mainLink = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Advance-adv_a1.html";
+    var contractLink = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Contract-AdvanceA1.html";
     
-    const w1 = window.open(mainLink, "_blank");
+    var w1 = window.open(mainLink, "_blank");
     
-    try {
-        const w2 = window.open(contractLink, "_blank");
-        if (!w2 || w2.closed || typeof w2.closed === 'undefined') {
-            console.warn("第二個視窗被瀏覽器彈跳攔截，建議提示使用者允許彈跳視窗。");
+    setTimeout(function() {
+        var w2 = window.open(contractLink, "_blank");
+        if (!w2 || w2.closed || typeof w2.closed == 'undefined') {
+            console.warn("Contract popup blocked by mobile safety shield.");
         }
-    } catch (e) {
-        console.error("無法自動開啟第二個視窗:", e);
-    }
+    }, 150);
 }
 </script>
 </body>
