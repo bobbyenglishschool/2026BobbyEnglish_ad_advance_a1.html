@@ -472,9 +472,7 @@
             .title-group { text-align: center; width: 100%; }
             .logo-img { max-width: 110px; margin-bottom: 8px; }
             .description-scroll-box { max-height: 260px; }
-            table.ad-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-            table.ad-table td { min-width: 160px; }
-            table.ad-table th { min-width: 95px; }
+            table.ad-table { display: table; width: 100%; } /* 🎯 確保手機端表格滿版 */
             .footer-image-box { width: calc(100% + 30px); margin-left: -15px; }
             .last-page-footer-box { width: calc(100% + 30px); margin-left: -15px; }
             .page-footer-img { max-height: 120px; }
@@ -610,7 +608,7 @@
                         </tr>
                         <tr>
                             <td style="font-weight: bold;">⏰ 上課時間 | Class Time</td>
-                            <!-- 🎯 升級重點：幾何 100% 精準居中，格式與報名表/契約書完全一致 -->
+                            <!-- 🎯 幾何 100% 精準居中，格式與報名表/契約書完全一致 -->
                             <td style="text-align: center; vertical-align: middle;">
                                 <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: 2px 0;">
                                     <div style="font-weight:800; color:var(--uci-blue); font-size:13px; line-height:1.2;">
@@ -640,9 +638,10 @@
                         <tr>
                             <td style="font-weight: bold;">💰 課程學費 | Tuition Fee</td>
                             <td class="left-align">
-                                <strong style="color: var(--soft-red); font-size: 14.5px;">NT$31,186元</strong><br>
-                                <span class="note">備註：全期基本學費 $26,180元 ($770×34堂) + 專屬教材費 $2,966元 + 當期學雜費 $2,040元</span>
-                                <span class="note">Note: Base Tuition $26,180 ($770 x 34 lessons) + Textbooks $2,966 + School Fees $2,040</span>
+                                <!-- 🎯 核心升級：學費金額更新為 $31,740 元，教材費更新為 $3,520 元 ($2,770 + $750) -->
+                                <strong style="color: var(--soft-red); font-size: 14.5px;">NT$31,740元</strong><br>
+                                <span class="note">備註：全期基本學費 $26,180元 ($770×34堂) + 專屬教材費 $3,520元 ($2,770+$750) + 當期學雜費 $2,040元</span>
+                                <span class="note">Note: Base Tuition $26,180 ($770 x 34 lessons) + Textbooks $3,520 ($2,770+$750) + School Fees $2,040</span>
                             </td>
                         </tr>
                     </tbody>
@@ -672,12 +671,11 @@
 
 </div>
 
-<!-- 📡 雙視窗雙開機制，防範彈窗阻斷 -->
+<!-- 📡 雙視窗雙開機制，具備 Safari 防阻斷備援機制 -->
 <script>
 function openDualLinks(event) {
     if (event) event.preventDefault();
     
-    // 🎯 Aegis 核心修正：標準化網址，防止被瀏覽器彈跳阻斷並加入 150ms 安全延遲
     var mainLink = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Advance-adv_a1.html";
     var contractLink = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Contract-AdvanceA1.html";
     
@@ -686,7 +684,8 @@ function openDualLinks(event) {
     setTimeout(function() {
         var w2 = window.open(contractLink, "_blank");
         if (!w2 || w2.closed || typeof w2.closed == 'undefined') {
-            console.warn("Contract popup blocked by mobile safety shield.");
+            console.warn("Contract popup blocked. Guidance provided.");
+            alert("✨ 巴比美語溫馨提示：系統已為您開啟 Advance A1 報名表！若未自動開啟定型化契約書，請點擊報名頁面內的「契約審閱連結」即可查閱喔！");
         }
     }, 150);
 }
