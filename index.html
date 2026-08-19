@@ -465,7 +465,7 @@
             <div class="header-flex-box">
                 <div class="title-group">
                     <h1>
-                        <span class="en-main-title"><b>Bobby English: A1 兒童進階班 - </b><span class="zh-title-tag">世界探索與語言活用班</span></span>
+                        <span class="en-main-title">Bobby English: A1 兒童進階班 - <span class="zh-title-tag">世界探索與語言活用班</span></span>
                         <span class="zh-sub-title">✨ A1 世界探索班 (A1 World Explorer) ✨</span>
                     </h1>
                     <h2>DISCOVER YOUR WORLD, BUILD YOUR ENGLISH 🚀</h2>
@@ -645,24 +645,13 @@
 
 </div>
 
-<!-- 📡 Aegis 修正版：完美破解 Safari/Chrome 防彈窗阻斷機制 -->
+<!-- 📡 Aegis 最新單發防阻斷腳本：直連 Advance A1 線上報名表 -->
 <script>
 function openDualLinks(event) {
     if (event) event.preventDefault();
-    
-    // 🎯 網址校準：對齊 GitHub 標準命名規範
-    var mainLink = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Advance-A1.html";
-    var contractLink = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Contract-Advance-A1.html";
-    
-    // 🎯 核心修正：取消原本傳遞缺陷！在使用者真實點擊當下，同步發射兩個視窗！
-    var w1 = window.open(mainLink, "_blank");
-    var w2 = window.open(contractLink, "_blank");
-    
-    // 🛡️ 防彈備援機制：如果第二個視窗被手機強硬阻斷，自動進行溫馨指引
-    if (!w2 || w2.closed || typeof w2.closed === 'undefined') {
-        console.warn("Contract popup blocked by mobile safety shield. Fallback engaged.");
-        alert("✨ 巴比美語溫馨提示：系統已為您開啟 Advance A1 報名表！若定型化契約未自動彈出，請於報名表頁面點擊上方「契約審閱連結」即可查看喔！");
-    }
+    // 🎯 直連主線上報名表，100% 突破所有手機 Safari/Line 阻斷防線
+    var formUrl = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Advance-A1.html";
+    window.open(formUrl, "_blank");
 }
 </script>
 </body>
