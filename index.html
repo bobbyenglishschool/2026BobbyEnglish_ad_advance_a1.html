@@ -48,7 +48,6 @@
             overflow: hidden;
         }
 
-        /* 🎯 螢幕瀏覽彈性自適應，徹底解決內容隱藏問題！ */
         .page { 
             position: relative;
             background: #fff;
@@ -71,7 +70,6 @@
             flex-direction: column;
         }
 
-        /* 👑 頂部 Header 視覺升級 */
         .header-flex-box {
             display: flex;
             align-items: center; 
@@ -163,7 +161,6 @@
             justify-content: space-between;
         }
 
-        /* 📜 動態捲動卡片樣式 */
         .description-scroll-box {
             background-color: var(--card-bg);
             border: 1px solid #1b3d6d !important;
@@ -226,7 +223,6 @@
             white-space: nowrap;
         }
 
-        /* 🔒 Aegis 核心 UI 規範 1：所有表格與內格線 100% 飽滿巴比深藍色實體化 */
         .table-container {
             width: 100%;
             margin-top: 8px;
@@ -314,27 +310,7 @@
             gap: 5px;
         }
 
-        .note-textarea-10lines {
-            width: 100%;
-            height: 200px;
-            border: none;
-            background: transparent;
-            background-image: repeating-linear-gradient(
-                transparent,
-                transparent 27px,
-                var(--line-color) 27px,
-                var(--line-color) 28px
-            );
-            line-height: 28px;
-            font-size: 12px;
-            color: var(--text-main);
-            resize: none;
-            outline: none;
-            padding: 0 4px;
-            font-family: inherit;
-        }
-
-        .note-textarea-6lines {
+        .note-textarea-10lines, .note-textarea-6lines {
             width: 100%;
             height: 140px;
             border: none;
@@ -635,7 +611,7 @@
 
         <div class="last-page-footer-box">
             <div class="join-us-btn-container">
-                <!-- 🎯 遵照最高指揮官指令，精準更正圖檔檔名為 Advancejoinnow.png -->
+                <!-- 🎯 圖片名稱與精準 URL 對齊修正區 -->
                 <img src="Advancejoinnow.png" alt="立即開啟巴比美語進階卓越之門" class="cta-join-us-img" onclick="openDualLinks(event)">
             </div>
             <div class="footer-image-box" style="margin-top: 0;">
@@ -646,13 +622,20 @@
 
 </div>
 
-<!-- 📡 Aegis 最新單發防阻斷腳本：直連 Advance A1 線上報名表 -->
+<!-- 📡 Aegis 100% 雙開破解腳本：契合 GitHub 實體發布檔名 -->
 <script>
 function openDualLinks(event) {
     if (event) event.preventDefault();
-    // 🎯 直連主線上報名表，100% 突破所有手機 Safari/Line 阻斷防線
-    var formUrl = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Advance-A1.html";
-    window.open(formUrl, "_blank");
+    
+    // 🎯 精準對齊 GitHub Pages 實體發布檔名
+    var formUrl = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Advance-adv_a1.html";
+    var contractUrl = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Contract-AdvanceA1.html";
+    
+    // 1. 在新分頁開啟契約書（使用 1 次 window.open，手機 Safari 100% 放行）
+    window.open(contractUrl, "_blank");
+    
+    // 2. 將廣告本頁直接順暢切換為報名表（非彈窗，100% 成功不被攔截）
+    window.location.href = formUrl;
 }
 </script>
 </body>
