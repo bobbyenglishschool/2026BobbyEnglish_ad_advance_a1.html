@@ -9,7 +9,7 @@
     <!-- 引入專業雙語 Google Fonts 字型（Inter + Noto Sans TC） -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -27,7 +27,9 @@
         * {
             box-shadow: none;
             box-sizing: border-box;
-            font-family: 'Inter', 'Helvetica Neue', Arial, 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+            font-family: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
@@ -36,7 +38,6 @@
             padding: 20px 0;
             color: var(--text-main);
             line-height: 1.55;
-            -webkit-font-smoothing: antialiased;
         }
 
         .ad-container {
@@ -106,11 +107,12 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
             font-size: 19.5px;
             font-weight: 800;
+            letter-spacing: -0.2px;
         }
 
         .title-group h1 span.en-main-title span.zh-title-tag {
             font-size: 15px;
-            font-weight: 500;
+            font-weight: 700;
             color: #e2e8f0;
             margin-left: 4px;
         }
@@ -118,7 +120,7 @@
         .title-group h1 span.zh-sub-title {
             display: block;
             font-size: 15.5px;
-            font-weight: 700;
+            font-weight: 800;
             line-height: 1.35;
             color: var(--uci-gold);
             margin: 6px 0 8px 0;
@@ -136,6 +138,7 @@
             margin: 0;
             padding: 0;
             letter-spacing: 0.8px;
+            font-family: 'Inter', sans-serif;
         }
 
         .logo-img {
@@ -154,7 +157,7 @@
             margin-top: 14px; 
             margin-bottom: 10px; 
             font-size: 15px;
-            font-weight: 800;
+            font-weight: 900;
             letter-spacing: 0.3px;
             display: flex;
             align-items: center;
@@ -191,13 +194,15 @@
         p.paragraph-desc:last-child { margin-bottom: 0; }
 
         .light-en-text {
-            font-size: 11px;
+            font-size: 11.5px;
             font-weight: 400; 
             color: var(--text-sub);
             font-style: normal;
             display: block;
             margin-top: 4px;
-            line-height: 1.45;
+            line-height: 1.5;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.1px;
         }
 
         .pyp-badge {
@@ -215,7 +220,7 @@
             font-size: 13.5px;
             color: var(--soft-red);
             line-height: 1.45;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .no-orphan {
@@ -256,14 +261,14 @@
             color: var(--uci-blue); 
             text-align: center; 
             font-weight: 700;
-            font-size: 13px;
+            font-size: 13.5px;
         }
 
-        .center-text { text-align: center !important; font-weight: 700; color: var(--uci-blue); }
-        .left-align { text-align: left !important; }
+        .center-text { text-align: center !important; font-weight: 800; color: var(--uci-blue); }
+        .left-align { text-align: left !important; font-weight: 500; }
 
         ul.list-style { padding-left: 18px; margin-bottom: 6px; margin-top: 4px; }
-        ul.list-style li { margin-bottom: 8px; font-size: 13px; color: var(--text-main); line-height: 1.55; text-align: justify; word-break: break-word; }
+        ul.list-style li { margin-bottom: 8px; font-size: 13px; color: var(--text-main); line-height: 1.55; text-align: justify; word-break: break-word; font-weight: 500; }
 
         .info-card {
             background-color: var(--card-bg);
@@ -280,17 +285,20 @@
             font-weight: 400; 
             margin-top: 2px; 
             display: block; 
+            font-family: 'Inter', sans-serif;
         }
 
         .eng-text { 
             color: var(--text-sub); 
             display: block; 
             margin-top: 2px; 
-            font-size: 11px; 
+            font-size: 11.5px; 
             font-weight: 400; 
-            line-height: 1.4;
+            line-height: 1.45;
             text-align: justify;
             word-break: break-word;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.1px;
         }
 
         .note-lines-container {
@@ -301,8 +309,8 @@
         }
 
         .note-title {
-            font-size: 12px;
-            font-weight: 700;
+            font-size: 12.5px;
+            font-weight: 800;
             color: var(--uci-blue);
             margin-bottom: 4px;
             display: flex;
@@ -322,12 +330,13 @@
                 var(--line-color) 28px
             );
             line-height: 28px;
-            font-size: 12px;
+            font-size: 12.5px;
             color: var(--text-main);
             resize: none;
             outline: none;
             padding: 0 4px;
             font-family: inherit;
+            font-weight: 500;
         }
 
         .footer-image-box {
@@ -452,7 +461,7 @@
             <h2 class="section-heading">💡 課程理念 | Educational Philosophy</h2>
             
             <div class="description-scroll-box">
-                <p class="paragraph-desc" style="font-size: 13.5px; color: var(--uci-blue); font-weight: 700; margin-bottom: 6px;">
+                <p class="paragraph-desc" style="font-size: 13.5px; color: var(--uci-blue); font-weight: 800; margin-bottom: 6px;">
                     【用好奇心看世界，用實力說故事】
                 </p>
                 <p class="paragraph-desc">
@@ -503,8 +512,8 @@
             <p class="paragraph-desc" style="margin-bottom: 4px;">這學期的 34 堂課是一場精彩的探險！孩子將跟著老師的腳步，完成以下學習里程碑：<span class="light-en-text" style="display:block; margin-top: 2px;">These 34 lessons represent an exciting adventure! Together with our teachers, students will reach the following learning milestones:</span></p>
 
             <div class="info-card" style="padding: 10px 14px;">
-                <h3 style="font-size: 13.5px; color: var(--uci-blue); font-weight: 700; margin: 0 0 4px 0;">🌍【世界探索篇】用美語看見無限可能</h3>
-                <p class="paragraph-desc" style="font-size: 11.5px; margin-bottom: 6px; color: var(--text-sub);">Part 1: World Discovery - Seeing Infinite Possibilities through English (Oxford Discover Units 1-9)</p>
+                <h3 style="font-size: 13.5px; color: var(--uci-blue); font-weight: 800; margin: 0 0 4px 0;">🌍【世界探索篇】用美語看見無限可能</h3>
+                <p class="paragraph-desc" style="font-size: 11.5px; margin-bottom: 6px; color: var(--text-sub); font-family: 'Inter', sans-serif;">Part 1: World Discovery - Seeing Infinite Possibilities through English (Oxford Discover Units 1-9)</p>
                 <ul class="list-style" style="margin-bottom: 0;">
                     <li><strong>第一站：暖心連線 (Units 1-2)</strong> 🏫 —— 從家裡到社區，探索我們與朋友的社交小世界。<br><span class="eng-text">Station 1: Heartfelt Connections - Exploring our social circles, from families to making new friends in the community.</span></li>
                     <li><strong>第二站：自然觀察員 (Units 3 & 5)</strong> 🌳 —— 走進森林觀察大樹與動物的家，學習尊重生命。<br><span class="eng-text">Station 2: Nature Observers - Venturing into the wild to observe trees and animal habitats, learning to respect all living things.</span></li>
@@ -515,7 +524,7 @@
             </div>
 
             <div class="info-card" style="padding: 10px 14px;">
-                <h3 style="font-size: 13.5px; color: var(--uci-blue); font-weight: 700; margin: 0 0 4px 0;">✍️【語言活用篇】把英文說得更有邏輯</h3>
+                <h3 style="font-size: 13.5px; color: var(--uci-blue); font-weight: 800; margin: 0 0 4px 0;">✍️【語言活用篇】把英文說得更有邏輯</h3>
                 <p class="paragraph-desc" style="font-size: 11.5px; margin-bottom: 6px; color: var(--text-sub);">Part 2: Language in Action - Expressing Thoughts with Logic (Azar Grammar Chapters 14-15) 我們將專注於兩個最重要的「表達超能力」：</p>
                 <ul class="list-style" style="padding-left: 5px; margin-bottom: 0;">
                     <li><strong>形容詞魔法 (Chapter 14)：</strong>
@@ -554,46 +563,46 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="font-weight: bold;">📅 課程日期 | Course Dates</td>
+                            <td style="font-weight: 800;">📅 課程日期 | Course Dates</td>
                             <td class="left-align">2026年9月2日(三)正式開課 至 2027年1月8日(五)(每週三、五)<br><span class="note">Starts from September 2, 2026 to January 8, 2027 (Every Wed, Fri)</span></td>
                         </tr>
                         <tr>
-                            <td style="font-weight: bold;">⏰ 上課時間 | Class Time</td>
+                            <td style="font-weight: 800;">⏰ 上課時間 | Class Time</td>
                             <td style="text-align: center; vertical-align: middle;">
                                 <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: 2px 0;">
-                                    <div style="font-weight:800; color:var(--uci-blue); font-size:13px; line-height:1.2;">
+                                    <div style="font-weight:800; color:var(--uci-blue); font-size:13.5px; line-height:1.2;">
                                         <span class="no-orphan">每週三、五</span>
                                     </div>
-                                    <div style="font-weight:700; color:var(--uci-blue); font-size:11.5px; line-height:1.2; margin-top:3px;">
+                                    <div style="font-weight:700; color:var(--uci-blue); font-size:11.5px; line-height:1.2; margin-top:3px; font-family: 'Inter', sans-serif;">
                                         <span class="no-orphan">4:30 PM - 6:30 PM (2小時/堂)</span>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td style="font-weight: bold;">🔢 總堂數 | Total Lessons</td>
+                            <td style="font-weight: 800;">🔢 總堂數 | Total Lessons</td>
                             <td class="left-align">全期共 34 堂精緻進階實戰課<br><span class="note">34 lessons in total for the entire semester</span></td>
                         </tr>
                         <tr>
-                            <td style="font-weight: bold;">🎒 招生對象 | Target Students</td>
+                            <td style="font-weight: 800;">🎒 招生對象 | Target Students</td>
                             <td class="left-align">國小四至六年級（每週三、五固定上課，具備美語學習經驗 3 年以上者）<br><span class="note">Elementary School Grades 4-6 (Minimum 3 years of English learning experience)</span></td>
                         </tr>
                         <tr>
-                            <td style="font-weight: bold;">🛡️ 入學條件 | Admission Requirements</td>
-                            <td class="left-align" style="color: var(--text-main); font-size: 12.5px; line-height: 1.5;">
+                            <td style="font-weight: 800;">🛡️ 入學條件 | Admission Requirements</td>
+                            <td class="left-align" style="color: var(--text-main); font-size: 12.5px; line-height: 1.5; font-weight: 500;">
                                 1. 學員美語學習經驗需滿 3 年以上<br>
                                 2. 須通過補習班入學口試與筆試測驗
                             </td>
                         </tr>
                         <tr>
-                            <td style="font-weight: bold;">💰 課程學費 | Tuition Fee</td>
+                            <td style="font-weight: 800;">💰 課程學費 | Tuition Fee</td>
                             <td class="left-align">
                                 <!-- 🎯 Aegis 核心協定：去身分標籤，全項目動態折扣算式絕對咬合 -->
-                                <div style="font-size: 12px; color: var(--text-main); line-height: 1.6;">
-                                    <div>• <strong>標準原價：</strong>Math.round((26180 + 3520 + 2040) × 1.0) = <strong style="color: var(--soft-red); font-size: 13.5px;">NT$31,740</strong></div>
-                                    <div>• <strong>✨ 9 折優惠：</strong>Math.round((26180 + 3520 + 2040) × 0.9) = <strong style="color: var(--uci-blue); font-size: 13px;">NT$28,566</strong></div>
-                                    <div>• <strong>✨ 85 折優惠：</strong>Math.round((26180 + 3520 + 2040) × 0.85) = <strong style="color: var(--uci-blue); font-size: 13px;">NT$26,979</strong></div>
-                                    <div>• <strong>✨ 8 折優惠：</strong>Math.round((26180 + 3520 + 2040) × 0.8) = <strong style="color: var(--uci-blue); font-size: 13px;">NT$25,392</strong></div>
+                                <div style="font-size: 12px; color: var(--text-main); line-height: 1.6; font-weight: 500;">
+                                    <div>• <strong>標準原價：</strong>Math.round((26180 + 3520 + 2040) × 1.0) = <strong style="color: var(--soft-red); font-size: 13.5px; font-family: 'Inter', sans-serif;">NT$31,740</strong></div>
+                                    <div>• <strong>✨ 9 折優惠：</strong>Math.round((26180 + 3520 + 2040) × 0.9) = <strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$28,566</strong></div>
+                                    <div>• <strong>✨ 85 折優惠：</strong>Math.round((26180 + 3520 + 2040) × 0.85) = <strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$26,979</strong></div>
+                                    <div>• <strong>✨ 8 折優惠：</strong>Math.round((26180 + 3520 + 2040) × 0.8) = <strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$25,392</strong></div>
                                 </div>
                                 <span class="note" style="margin-top: 4px;">* 含基本學費 $26,180 + 教材費 $3,520 + 學雜費 $2,040，全項目同步連動折扣！</span>
                             </td>
@@ -604,7 +613,7 @@
 
             <div class="pyp-badge">
                 <p>與我們攜手開啟跨學科思維的嶄新視界，點燃孩子探索百科長篇的智慧，自信活用美語寫下對世界的<span class="no-orphan">發現！</span></p>
-                <p style="font-size: 11px; font-weight: 400; color: var(--text-sub); margin-top: 2px;">Discover Your World, Build Your English with Bobby English School!</p>
+                <p style="font-size: 11.5px; font-weight: 500; color: var(--text-sub); margin-top: 2px; font-family: 'Inter', sans-serif;">Discover Your World, Build Your English with Bobby English School!</p>
             </div>
 
             <div class="note-lines-container">
