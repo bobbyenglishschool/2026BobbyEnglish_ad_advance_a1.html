@@ -375,27 +375,24 @@
             gap: 10px; 
         }
 
-        /* 🎯 雙入口按鈕左右對齊容器 */
         .join-us-btn-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
+            text-align: center;
             width: 100%;
-            margin-bottom: 6px;
-            padding: 0 20px;
+            margin-bottom: 4px;
         }
 
-        .cta-btn-img {
-            width: 48%;
-            max-width: 155px;
+        .cta-join-us-img {
+            width: 100%;
+            max-width: 145px;
             height: auto;
             cursor: pointer;
             transition: transform 0.25s ease, filter 0.25s ease;
+            margin: 0 auto;
+            display: block;
             filter: drop-shadow(0 3px 5px rgba(0,0,0,0.12));
         }
 
-        .cta-btn-img:hover {
+        .cta-join-us-img:hover {
             transform: translateY(-2px) scale(1.04);
             filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
         }
@@ -604,14 +601,13 @@
                         <tr>
                             <td style="font-weight: 800;">💰 課程學費 | Tuition Fee</td>
                             <td class="left-align">
-                                <!-- 🎯 Aegis 隱藏數學算式，僅保留精準金額與優惠名稱 -->
-                                <div style="font-size: 12.5px; color: var(--text-main); line-height: 1.65; font-weight: 500;">
-                                    <div>• <strong>標準原價：</strong><strong style="color: var(--soft-red); font-size: 13.5px; font-family: 'Inter', sans-serif;">NT$ 31,740 元</strong></div>
-                                    <div>• <strong>✨ 9 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$ 28,566 元</strong></div>
-                                    <div>• <strong>✨ 85 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$ 26,979 元</strong></div>
-                                    <div>• <strong>✨ 8 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$ 25,392 元</strong></div>
+                                <!-- 🎯 Aegis 核心協定：隱藏 Math.round 算式過程與備註說明，呈現精簡清晰的特惠價格 -->
+                                <div style="font-size: 12px; color: var(--text-main); line-height: 1.6; font-weight: 500;">
+                                    <div>• <strong>標準原價：</strong><strong style="color: var(--soft-red); font-size: 13.5px; font-family: 'Inter', sans-serif;">NT$31,740</strong></div>
+                                    <div>• <strong>✨ 9 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$28,566</strong></div>
+                                    <div>• <strong>✨ 85 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$26,979</strong></div>
+                                    <div>• <strong>✨ 8 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$25,392</strong></div>
                                 </div>
-                                <span class="note" style="margin-top: 4px;">* 含基本學費 $26,180 + 教材費 $3,520 + 學雜費 $2,040，全項目同步連動折扣！</span>
                             </td>
                         </tr>
                     </tbody>
@@ -630,10 +626,9 @@
         </div>
 
         <div class="last-page-footer-box">
-            <!-- 🎯 刪除 Advancejoinnow.png，替換為左右並排雙按鈕 -->
             <div class="join-us-btn-container">
-                <img src="Advance-registrationform.png" alt="立即填寫 Advance A1 線上報名表" class="cta-btn-img" onclick="openFormLink(event)">
-                <img src="Advance-contract.png" alt="點擊查看 Advance A1 線上定型化契約書" class="cta-btn-img" onclick="openContractLink(event)">
+                <!-- 🎯 1. 替換為 Advance-registrationform.png 2. 點擊直接開啟 Advance A1 線上報名表 -->
+                <img src="Advance-registrationform.png" alt="點擊立即進行 Advance A1 線上報名登記" class="cta-join-us-img" onclick="openRegistrationForm(event)">
             </div>
             <div class="footer-image-box" style="margin-top: 0;">
                 <img src="Advancekids.png" alt="巴比美語學員快樂探究合照" class="page-footer-img">
@@ -643,20 +638,16 @@
 
 </div>
 
-<!-- 📡 Aegis 雙按鈕獨立跳轉腳本：相容各大行動裝置與 Safrai 瀏覽器 -->
+<!-- 📡 Aegis 單頁精準跳轉腳本：點擊直接開啟線上報名表網頁，完全移除契約書連結 -->
 <script>
-// 1. 開啟線上報名表
-function openFormLink(event) {
+function openRegistrationForm(event) {
     if (event) event.preventDefault();
+    
+    // 🎯 精準跳轉至 Joy 指揮官指定的 Advance A1 線上報名表網址
     var formUrl = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Advance-adv_a1.html";
+    
+    // 順暢開跳轉至報名表新頁籤
     window.open(formUrl, "_blank");
-}
-
-// 2. 開啟定型化契約書
-function openContractLink(event) {
-    if (event) event.preventDefault();
-    var contractUrl = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Contract-AdvanceA1.html";
-    window.open(contractUrl, "_blank");
 }
 </script>
 </body>
