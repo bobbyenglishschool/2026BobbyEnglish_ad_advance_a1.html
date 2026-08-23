@@ -2,11 +2,9 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <!-- 🎯 全載具核心天線：確保行動裝置與 A4 紙張列印排版 100% 完美自適應 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Advance A1: World Explorer | 私立巴比美語短期補習班</title>
     
-    <!-- 引入專業雙語 Google Fonts 字型（Inter + Noto Sans TC） -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -18,7 +16,7 @@
             --uci-gold: #fecc07; 
             --soft-red: #e74c3c;
             --card-bg: #f8fafc;
-            --border-color: #1b3d6d; /* 🎯 強制全面為巴比深藍色外框 */
+            --border-color: #1b3d6d;
             --line-color: #cbd5e1;
             --text-main: #1e293b;
             --text-sub: #475569;
@@ -37,7 +35,7 @@
             margin: 0;
             padding: 20px 0;
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         .ad-container {
@@ -52,7 +50,7 @@
         .page { 
             position: relative;
             background: #fff;
-            padding: 30px 35px 20px 35px;
+            padding: 35px 40px 20px 40px;
             overflow: visible;
             display: flex;
             flex-direction: column;
@@ -61,9 +59,7 @@
             border-bottom: 2px dashed #e2e8f0;
         }
 
-        .page:last-child {
-            border-bottom: none;
-        }
+        .page:last-child { border-bottom: none; }
 
         .page-content {
             flex: 1;
@@ -76,9 +72,9 @@
             align-items: center; 
             justify-content: space-between;
             gap: 15px;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             background: linear-gradient(135deg, var(--uci-blue) 0%, var(--uci-blue-dark) 100%); 
-            padding: 18px 24px;
+            padding: 20px 26px;
             border-radius: 10px;
             border-bottom: 4.5px solid var(--uci-gold);
             min-height: 140px;
@@ -93,52 +89,51 @@
             justify-content: center; 
         }
 
-        .title-group h1 {
-            margin: 0;
-            padding: 0;
-        }
+        .title-group h1 { margin: 0; padding: 0; }
 
         .title-group h1 span.en-main-title { 
             display: block;
-            line-height: 1.25;
+            line-height: 1.3;
             color: #ffffff;
             margin: 0 0 6px 0;
             padding: 0;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-            font-size: 19.5px;
-            font-weight: 800;
-            letter-spacing: -0.2px;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 0.2px;
+            word-break: keep-all;
         }
 
         .title-group h1 span.en-main-title span.zh-title-tag {
-            font-size: 15px;
-            font-weight: 700;
+            font-size: 15.5px;
+            font-weight: 800;
             color: #e2e8f0;
             margin-left: 4px;
+            display: inline-block;
         }
 
         .title-group h1 span.zh-sub-title {
             display: block;
-            font-size: 15.5px;
-            font-weight: 800;
+            font-size: 16px;
+            font-weight: 900;
             line-height: 1.35;
             color: var(--uci-gold);
             margin: 6px 0 8px 0;
             padding: 0;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-            white-space: nowrap;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
+            word-break: keep-all;
         }
 
         .title-group h2 {
-            font-size: 11.5px;
-            font-weight: 800;
+            font-size: 12px;
+            font-weight: 700;
             color: #ffffff;
-            opacity: 0.9;
-            line-height: 1.25;
+            opacity: 0.92;
+            line-height: 1.3;
             margin: 0;
             padding: 0;
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
             font-family: 'Inter', sans-serif;
         }
 
@@ -154,10 +149,10 @@
         h2.section-heading { 
             color: var(--uci-blue); 
             border-bottom: 2.5px solid var(--uci-blue); 
-            padding-bottom: 4px; 
-            margin-top: 14px; 
-            margin-bottom: 10px; 
-            font-size: 15.5px;
+            padding-bottom: 5px; 
+            margin-top: 16px; 
+            margin-bottom: 12px; 
+            font-size: 16px;
             font-weight: 900;
             letter-spacing: 0.4px;
             display: flex;
@@ -168,27 +163,23 @@
         .description-scroll-box {
             background-color: var(--card-bg);
             border: 1px solid #1b3d6d !important;
-            border-left: 4.5px solid var(--uci-blue) !important;
-            padding: 16px 20px;
+            border-left: 5px solid var(--uci-blue) !important;
+            padding: 18px 22px;
             border-radius: 8px;
-            margin-bottom: 10px;
-            max-height: 270px; 
+            margin-bottom: 12px;
+            max-height: 280px; 
             overflow-y: auto;  
             position: relative;
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
         }
 
-        .description-scroll-box::-webkit-scrollbar { width: 5px; }
-        .description-scroll-box::-webkit-scrollbar-track { background: #e2e8f0; border-radius: 4px; }
-        .description-scroll-box::-webkit-scrollbar-thumb { background: var(--uci-blue); border-radius: 4px; }
-
         p.paragraph-desc {
             font-size: 13.5px;
             font-weight: 500;
-            margin: 0 0 8px 0;
+            margin: 0 0 10px 0;
             text-align: justify;
             color: var(--text-main);
-            line-height: 1.65;
+            line-height: 1.68;
             word-break: break-word;
         }
 
@@ -198,10 +189,9 @@
             font-size: 11.5px;
             font-weight: 400; 
             color: var(--text-sub);
-            font-style: normal;
             display: block;
             margin-top: 4px;
-            line-height: 1.5;
+            line-height: 1.55;
             font-family: 'Inter', sans-serif;
             letter-spacing: 0.1px;
         }
@@ -209,18 +199,18 @@
         .pyp-badge {
             background-color: #fef2f2;
             border: 1px solid #fecaca;
-            padding: 10px 16px;
-            margin: 10px 0;
-            border-radius: 6px;
+            padding: 12px 18px;
+            margin: 12px 0;
+            border-radius: 8px;
             text-align: center; 
-            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
         }
 
         .pyp-badge p {
             margin: 0;
             font-size: 13.5px;
             color: var(--soft-red);
-            line-height: 1.45;
+            line-height: 1.5;
             font-weight: 800;
             letter-spacing: 0.3px;
         }
@@ -232,8 +222,10 @@
 
         .table-container {
             width: 100%;
-            margin-top: 8px;
-            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-bottom: 12px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         table.ad-table { 
@@ -244,17 +236,15 @@
             table-layout: fixed;
             word-wrap: break-word;
             border: 1px solid #1b3d6d !important;
-            border-radius: 0px;
-            overflow: hidden;
             background-color: #ffffff;
         }
 
         table.ad-table th, table.ad-table td { 
             border: 1px solid #1b3d6d !important;
-            padding: 9px 12px; 
+            padding: 10px 14px; 
             vertical-align: middle; 
             text-align: left; 
-            line-height: 1.55;
+            line-height: 1.6;
             word-break: break-word;
         }
 
@@ -270,23 +260,23 @@
         .center-text { text-align: center !important; font-weight: 800; color: var(--uci-blue); }
         .left-align { text-align: left !important; font-weight: 500; }
 
-        ul.list-style { padding-left: 18px; margin-bottom: 6px; margin-top: 4px; }
-        ul.list-style li { margin-bottom: 8px; font-size: 13px; color: var(--text-main); line-height: 1.6; text-align: justify; word-break: break-word; font-weight: 500; }
+        ul.list-style { padding-left: 20px; margin-bottom: 6px; margin-top: 4px; }
+        ul.list-style li { margin-bottom: 10px; font-size: 13px; color: var(--text-main); line-height: 1.65; text-align: justify; font-weight: 500; }
 
         .info-card {
             background-color: var(--card-bg);
             border: 1px solid #1b3d6d !important;
-            padding: 12px 16px;
-            border-radius: 6px;
-            margin-top: 6px;
-            margin-bottom: 10px;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-top: 8px;
+            margin-bottom: 12px;
         }
 
         .note { 
-            font-size: 10.5px; 
+            font-size: 11px; 
             color: var(--text-sub); 
             font-weight: 500; 
-            margin-top: 2px; 
+            margin-top: 3px; 
             display: block; 
             font-family: 'Inter', sans-serif;
         }
@@ -294,31 +284,29 @@
         .eng-text { 
             color: var(--text-sub); 
             display: block; 
-            margin-top: 2px; 
+            margin-top: 3px; 
             font-size: 11.5px; 
             font-weight: 400; 
-            line-height: 1.48;
+            line-height: 1.5;
             text-align: justify;
-            word-break: break-word;
             font-family: 'Inter', sans-serif;
-            letter-spacing: 0.1px;
         }
 
         .note-lines-container {
-            margin-top: 8px;
-            margin-bottom: 6px;
+            margin-top: 10px;
+            margin-bottom: 8px;
             background: transparent;
             page-break-inside: avoid;
         }
 
         .note-title {
-            font-size: 12.5px;
+            font-size: 13px;
             font-weight: 800;
             color: var(--uci-blue);
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
             letter-spacing: 0.3px;
         }
 
@@ -346,7 +334,7 @@
         .footer-image-box {
             width: calc(100% + 80px); 
             margin-left: -40px; 
-            margin-top: 8px;
+            margin-top: 10px;
             overflow: hidden;
             display: flex;
             justify-content: center;
@@ -367,34 +355,30 @@
         .last-page-footer-box {
             width: calc(100% + 80px);
             margin-left: -40px;
-            margin-top: 8px;
+            margin-top: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
-            gap: 10px; 
+            gap: 12px; 
         }
 
-        .join-us-btn-container {
-            text-align: center;
-            width: 100%;
-            margin-bottom: 4px;
-        }
+        .join-us-btn-container { text-align: center; width: 100%; margin-bottom: 4px; }
 
         .cta-join-us-img {
             width: 100%;
-            max-width: 145px;
+            max-width: 155px;
             height: auto;
             cursor: pointer;
             transition: transform 0.25s ease, filter 0.25s ease;
             margin: 0 auto;
             display: block;
-            filter: drop-shadow(0 3px 5px rgba(0,0,0,0.12));
+            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.15));
         }
 
         .cta-join-us-img:hover {
-            transform: translateY(-2px) scale(1.04);
-            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+            transform: translateY(-2px) scale(1.05);
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.22));
         }
 
         @media print {
@@ -432,14 +416,16 @@
         @media (max-width: 768px) {
             body { padding: 0; }
             .ad-container { border-radius: 0; box-shadow: none; }
-            .page { padding: 20px 15px 15px 15px; min-height: auto; }
-            .header-flex-box { padding: 15px 18px; flex-direction: column-reverse; text-align: center; }
+            .page { padding: 22px 18px 15px 18px; min-height: auto; }
+            .header-flex-box { padding: 16px 20px; flex-direction: column-reverse; text-align: center; }
             .title-group { text-align: center; width: 100%; }
+            .title-group h1 span.en-main-title { font-size: 18px; }
+            .title-group h1 span.zh-sub-title { font-size: 15px; }
             .logo-img { max-width: 110px; margin-bottom: 8px; }
             .description-scroll-box { max-height: 260px; }
             table.ad-table { display: table; width: 100%; }
-            .footer-image-box { width: calc(100% + 30px); margin-left: -15px; }
-            .last-page-footer-box { width: calc(100% + 30px); margin-left: -15px; }
+            .footer-image-box { width: calc(100% + 36px); margin-left: -18px; }
+            .last-page-footer-box { width: calc(100% + 36px); margin-left: -18px; }
             .page-footer-img { max-height: 120px; }
         }
     </style>
@@ -465,20 +451,20 @@
             <h2 class="section-heading">💡 課程理念 | Educational Philosophy</h2>
             
             <div class="description-scroll-box">
-                <p class="paragraph-desc" style="font-size: 13.5px; color: var(--uci-blue); font-weight: 800; margin-bottom: 6px;">
+                <p class="paragraph-desc" style="font-size: 14px; color: var(--uci-blue); font-weight: 900; margin-bottom: 6px;">
                     【用好奇心看世界，用實力說故事】
                 </p>
                 <p class="paragraph-desc">
                     當孩子完成 Let's Go 的基礎航行後，Bobby 老師將帶領他們跨入更廣闊的知識海洋。在 Advance A1 班，我們不再只是練習單純的對話，而是將美語轉化為「探索世界的望遠鏡」與「表達自我的邏輯腦」。透過 Bobby 老師引領的主題探索課程 (Oxford Discover 1)，孩子將化身小小觀察家，從自然、科學到社區生活，在解決問題的過程中建立獨立思考的習慣；同時，配合 Joy 老師的語法活用引導 (Azar Grammar)，將零散的單字編織成完整的邏輯，讓孩子從「說單字」進步到「講故事」，自信地活用美語寫下對世界的發現。
                 </p>
-                <p class="paragraph-desc" style="margin-top: 8px; border-top: 1px dashed #cbd5e1; padding-top: 8px;">
+                <p class="paragraph-desc" style="margin-top: 10px; border-top: 1px dashed #cbd5e1; padding-top: 8px;">
                     <strong style="font-weight: 800; color: var(--uci-blue);">【Discover Your World, Build Your English】</strong>
                     <span class="light-en-text">After mastering the basics, it's time for young learners to use English as a tool to explore something bigger. In our A1 Advance Class, we bridge the gap between simple conversation and meaningful discovery. By integrating inquiry-based exploration with systematic language building, we empower 3rd to 5th graders to become confident thinkers.</span>
                 </p>
             </div>
 
-            <h2 class="section-heading" style="margin-top: 8px;">🎯 雙軌學習地基 | The Pillars of Language Growth</h2>
-            <p class="paragraph-desc" style="margin-bottom: 4px;">我們精選兩套享譽全球的教材，像蓋房子一樣，同步為孩子打造「寬廣的視野」與「堅固的骨架」：<span class="light-en-text" style="display:block; margin-top: 2px;">We have carefully selected two world-renowned curricula to build both a broad perspective and a solid linguistic foundation for your child:</span></p>
+            <h2 class="section-heading" style="margin-top: 10px;">🎯 雙軌學習地基 | The Pillars of Language Growth</h2>
+            <p class="paragraph-desc" style="margin-bottom: 6px;">我們精選兩套享譽全球的教材，像蓋房子一樣，同步為孩子打造「寬廣的視野」與「堅固的骨架」：<span class="light-en-text" style="display:block; margin-top: 2px;">We have carefully selected two world-renowned curricula to build both a broad perspective and a solid linguistic foundation for your child:</span></p>
             
             <div class="table-container">
                 <table class="ad-table">
@@ -513,11 +499,11 @@
     <div class="page">
         <div class="page-content" style="padding-top: 5px;">
             <h2 class="section-heading" style="margin-top: 0;">🗺️ 本學期的成長藍圖 | Our Learning Journey (34 Lessons)</h2>
-            <p class="paragraph-desc" style="margin-bottom: 4px;">這學期的 34 堂課是一場精彩的探險！孩子將跟著老師的腳步，完成以下學習里程碑：<span class="light-en-text" style="display:block; margin-top: 2px;">These 34 lessons represent an exciting adventure! Together with our teachers, students will reach the following learning milestones:</span></p>
+            <p class="paragraph-desc" style="margin-bottom: 6px;">這學期的 34 堂課是一場精彩的探險！孩子將跟著老師的腳步，完成以下學習里程碑：<span class="light-en-text" style="display:block; margin-top: 2px;">These 34 lessons represent an exciting adventure! Together with our teachers, students will reach the following learning milestones:</span></p>
 
-            <div class="info-card" style="padding: 10px 14px;">
-                <h3 style="font-size: 13.5px; color: var(--uci-blue); font-weight: 800; margin: 0 0 4px 0;">🌍【世界探索篇】用美語看見無限可能</h3>
-                <p class="paragraph-desc" style="font-size: 11.5px; margin-bottom: 6px; color: var(--text-sub); font-family: 'Inter', sans-serif;">Part 1: World Discovery - Seeing Infinite Possibilities through English (Oxford Discover Units 1-9)</p>
+            <div class="info-card">
+                <h3 style="font-size: 14px; color: var(--uci-blue); font-weight: 900; margin: 0 0 6px 0;">🌍【世界探索篇】用美語看見無限可能</h3>
+                <p class="paragraph-desc" style="font-size: 12px; margin-bottom: 8px; color: var(--text-sub); font-family: 'Inter', sans-serif;">Part 1: World Discovery - Seeing Infinite Possibilities through English (Oxford Discover Units 1-9)</p>
                 <ul class="list-style" style="margin-bottom: 0;">
                     <li><strong>第一站：暖心連線 (Units 1-2)</strong> 🏫 —— 從家裡到社區，探索我們與朋友的社交小世界。<br><span class="eng-text">Station 1: Heartfelt Connections - Exploring our social circles, from families to making new friends in the community.</span></li>
                     <li><strong>第二站：自然觀察員 (Units 3 & 5)</strong> 🌳 —— 走進森林觀察大樹與動物的家，學習尊重生命。<br><span class="eng-text">Station 2: Nature Observers - Venturing into the wild to observe trees and animal habitats, learning to respect all living things.</span></li>
@@ -527,15 +513,15 @@
                 </ul>
             </div>
 
-            <div class="info-card" style="padding: 10px 14px;">
-                <h3 style="font-size: 13.5px; color: var(--uci-blue); font-weight: 800; margin: 0 0 4px 0;">✍️【語言活用篇】把英文說得更有邏輯</h3>
-                <p class="paragraph-desc" style="font-size: 11.5px; margin-bottom: 6px; color: var(--text-sub);">Part 2: Language in Action - Expressing Thoughts with Logic (Azar Grammar Chapters 14-15) 我們將專注於兩個最重要的「表達超能力」：</p>
+            <div class="info-card">
+                <h3 style="font-size: 14px; color: var(--uci-blue); font-weight: 900; margin: 0 0 6px 0;">✍️【語言活用篇】把英文說得更有邏輯</h3>
+                <p class="paragraph-desc" style="font-size: 12px; margin-bottom: 8px; color: var(--text-sub);">Part 2: Language in Action - Expressing Thoughts with Logic (Azar Grammar Chapters 14-15) 我們將專注於兩個最重要的「表達超能力」：</p>
                 <ul class="list-style" style="padding-left: 5px; margin-bottom: 0;">
                     <li><strong>形容詞魔法 (Chapter 14)：</strong>
                         <br>學會精準描述事物的樣貌，並練習用「大多數、一些」來表達對數量的觀察，讓句子變得<span class="no-orphan">豐富生動。</span>
                         <span class="eng-text">Adjective Magic (Chapter 14): Learning to describe the world with precision and using quantifiers like "most of" or "some of" to make sentences rich and vivid.</span>
                     </li>
-                    <li style="margin-top: 6px;"><strong>比較級與最高級 (Chapter 15)：</strong>
+                    <li style="margin-top: 8px;"><strong>比較級與最高級 (Chapter 15)：</strong>
                         <br>練習「一樣、相似、不同」的對比，學會操作「最棒的其中之一」等進階句型，讓說話更有<span class="no-orphan">說服力。</span>
                         <span class="eng-text">Comparisons & Superlatives (Chapter 15): Practicing how to contrast "the same," "similar," and "different." Mastering advanced structures like "one of the best" to make speech and writing more persuasive.</span>
                     </li>
@@ -593,7 +579,7 @@
                         </tr>
                         <tr>
                             <td style="font-weight: 800;">🛡️ 入學條件 | Admission Requirements</td>
-                            <td class="left-align" style="color: var(--text-main); font-size: 12.5px; line-height: 1.5; font-weight: 500;">
+                            <td class="left-align" style="color: var(--text-main); font-size: 12.5px; line-height: 1.55; font-weight: 500;">
                                 1. 學員美語學習經驗需滿 3 年以上<br>
                                 2. 須通過補習班入學口試與筆試測驗
                             </td>
@@ -601,12 +587,11 @@
                         <tr>
                             <td style="font-weight: 800;">💰 課程學費 | Tuition Fee</td>
                             <td class="left-align">
-                                <!-- 🎯 Aegis 核心協定：隱藏 Math.round 算式過程與備註說明，呈現精簡清晰的特惠價格 -->
-                                <div style="font-size: 12px; color: var(--text-main); line-height: 1.6; font-weight: 500;">
-                                    <div>• <strong>標準原價：</strong><strong style="color: var(--soft-red); font-size: 13.5px; font-family: 'Inter', sans-serif;">NT$31,740</strong></div>
-                                    <div>• <strong>✨ 9 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$28,566</strong></div>
-                                    <div>• <strong>✨ 85 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$26,979</strong></div>
-                                    <div>• <strong>✨ 8 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13px; font-family: 'Inter', sans-serif;">NT$25,392</strong></div>
+                                <div style="font-size: 12.5px; color: var(--text-main); line-height: 1.6; font-weight: 500;">
+                                    <div>• <strong>標準原價：</strong><strong style="color: var(--soft-red); font-size: 14px; font-family: 'Inter', sans-serif;">NT$31,740</strong></div>
+                                    <div>• <strong>✨ 9 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13.5px; font-family: 'Inter', sans-serif;">NT$28,566</strong></div>
+                                    <div>• <strong>✨ 85 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13.5px; font-family: 'Inter', sans-serif;">NT$26,979</strong></div>
+                                    <div>• <strong>✨ 8 折優惠：</strong><strong style="color: var(--uci-blue); font-size: 13.5px; font-family: 'Inter', sans-serif;">NT$25,392</strong></div>
                                 </div>
                             </td>
                         </tr>
@@ -616,7 +601,7 @@
 
             <div class="pyp-badge">
                 <p>與我們攜手開啟跨學科思維的嶄新視界，點燃孩子探索百科長篇的智慧，自信活用美語寫下對世界的<span class="no-orphan">發現！</span></p>
-                <p style="font-size: 11.5px; font-weight: 500; color: var(--text-sub); margin-top: 2px; font-family: 'Inter', sans-serif;">Discover Your World, Build Your English with Bobby English School!</p>
+                <p style="font-size: 11.5px; font-weight: 500; color: var(--text-sub); margin-top: 3px; font-family: 'Inter', sans-serif;">Discover Your World, Build Your English with Bobby English School!</p>
             </div>
 
             <div class="note-lines-container">
@@ -627,7 +612,6 @@
 
         <div class="last-page-footer-box">
             <div class="join-us-btn-container">
-                <!-- 🎯 1. 替換為 Advance-registrationform.png 2. 點擊直接開啟 Advance A1 線上報名表 -->
                 <img src="Advance-registrationform.png" alt="點擊立即進行 Advance A1 線上報名登記" class="cta-join-us-img" onclick="openRegistrationForm(event)">
             </div>
             <div class="footer-image-box" style="margin-top: 0;">
@@ -638,15 +622,10 @@
 
 </div>
 
-<!-- 📡 Aegis 單頁精準跳轉腳本：點擊直接開啟線上報名表網頁，完全移除契約書連結 -->
 <script>
 function openRegistrationForm(event) {
     if (event) event.preventDefault();
-    
-    // 🎯 精準跳轉至 Joy 指揮官指定的 Advance A1 線上報名表網址
     var formUrl = "https://bobbyenglishschool.github.io/2026BobbyEnglish-Advance-adv_a1.html";
-    
-    // 順暢開跳轉至報名表新頁籤
     window.open(formUrl, "_blank");
 }
 </script>
