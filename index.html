@@ -625,6 +625,7 @@
 <script>
 function openRegistrationForm(event) {
     if (event) event.preventDefault();
+    // 🎯 精準修正：採用相對路徑直接開啟同目錄下的 A1 報名表網頁，擺脫 404
     var formUrl = "Form.html";
     window.open(formUrl, "_blank");
 }
